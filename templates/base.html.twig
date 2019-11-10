@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{asset('assetsfile/bootstrap/css/bootstrap.min.css')}}" type="text/css">
+
+    </head>
+    <body>
+    {{include("/inc/navbar.html.twig") }}
+    <div class="container">
+        {% block body %}{% endblock %}
+
+    </div>
+
+    {#        <script src="extra/bootstrap/js/bootstrap.js" rel="script" type="javascript"></script>#}
+        {% block javascripts %}{% endblock %}
+
+    </body>
+
+</html>
